@@ -25,3 +25,36 @@ The designs were created to the following widths:
 
 - Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
 - Weights: 500, 700
+
+
+## Notes/Outline - Brian Slaby
+
+### Components
+- Button
+- Nav
+- Link?
+- Banner?
+
+### Layout
+Mobile
+- header
+    - logo
+    - hamburger menu
+- hero image
+- main section
+    - h1
+    - p
+    - learn more button
+    - logos (in a flexbox container; banner component?)
+
+Desktop
+- header
+    - logo
+    - nav items
+    - login/register (flex end)
+- main section (left)
+    - h1
+    - p
+    - learn more button
+    - logos (in a flexbox container; banner component?)
+- hero image (right)
