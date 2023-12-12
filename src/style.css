@@ -10,4 +10,85 @@ html, body {
 
 body {
     font-family: 'Epilogue', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+/* =========================
+           NAV STYLES 
+   =========================  */
+
+nav {
+    padding: 2em;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =========================
+         BUTTON STYLES 
+   =========================  */
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+}
+
+.primary-btn {
+    background-color: #141414;
+    color: #fafafa;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0.75em 1.25em;
+    border-radius: 10px;
+}
+
+/* =========================
+         BANNER STYLES 
+   =========================  */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.client-logos-banner {
+    margin-top: 3em;
+}
+
+.client-logo {
+    max-width: 20%;
+    aspect-ratio: auto;
+    object-fit: contain;
+
+}
+
+/* =========================
+         IMAGE STYLES 
+   =========================  */
+
+.hero-img {
+    width: 100%;
+}
+
+/* =========================
+        HOMEPAGE STYLES
+   =========================  */
+
+.home-content {
+    text-align: center;
+    padding: 1em;
+}
+
+.home-content p {
+    color: #696969;
+    margin-bottom: 2em;
 }
