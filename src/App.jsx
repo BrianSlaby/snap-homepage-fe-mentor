@@ -1,20 +1,28 @@
-import { useState } from 'react'
-import Nav from './components/Nav'
+import React from 'react'
+import Nav from './components/nav/Nav'
 import Button from './components/Button'
 import Banner from './components/Banner'
 
 export default function App() {
-  
-      // Change this Nav component to a header, the Nav will be in the hamburger menu for mobile.
+const [navVisible, setNavVisible] = React.useState(false)
+
+function toggleNav() {
+  setNavVisible(prevState => !prevState)
+}
+
   return (
     <>
-      <Nav classProp="main-nav">
+      <div className={`nav-container-mobile ${navVisible ? "" : "hidden"}`}>
+        <Nav toggleNav={toggleNav}/>
+      </div>
+      
+      <header>
         <img src="./public/images/logo.svg" />
 
-        <Button classProp="nav-btn">
+        <Button classProp="open-nav-btn" clickProp={toggleNav}>
           <img src="./public/icons/icon-menu.svg"/>
         </Button>
-      </Nav>
+      </header>
       <main>
         <img 
           src="./public/images/image-hero-mobile.png"
