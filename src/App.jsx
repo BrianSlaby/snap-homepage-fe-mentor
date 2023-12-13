@@ -6,7 +6,7 @@ import Banner from './components/Banner'
 export default function App() {
 const [navVisible, setNavVisible] = React.useState(false)
 
-const overlayVisibility = navVisible ? "active" : ""
+const overlayVisibility = navVisible ? "overlay-active" : ""
 
 function toggleNav() {
   setNavVisible(prevState => !prevState)
