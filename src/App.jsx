@@ -6,15 +6,19 @@ import Banner from './components/Banner'
 export default function App() {
 const [navVisible, setNavVisible] = React.useState(false)
 
+const overlayVisibility = navVisible ? "active" : ""
+
 function toggleNav() {
   setNavVisible(prevState => !prevState)
 }
+
 
   return (
     <>
       <div className={`nav-container-mobile ${navVisible ? "" : "hidden"}`}>
         <Nav toggleNav={toggleNav}/>
       </div>
+      <div className={`bg-overlay ${overlayVisibility}`}></div>
       
       <header>
         <img src="./public/images/logo.svg" />
