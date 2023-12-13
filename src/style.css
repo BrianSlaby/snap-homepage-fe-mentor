@@ -95,6 +95,7 @@ button {
 .ghost-btn {
     border-radius: 10px;
     font-size: 1.125rem;
+    margin: 0.5em 0;
 }
 
 .primary-btn {
@@ -103,10 +104,11 @@ button {
     font-weight: 700;
 }
 
-/* I don't know why the hover state on this button isn't working... */
+/* hover state only works on some screen sizes in dev tools, weird */
 .primary-btn:hover {
     background-color: #fafafa;
     color: #141414;
+    box-shadow: inset 0 0 0 2px #141414;
 }
 
 .secondary-btn,
@@ -114,12 +116,23 @@ button {
     color: #696969;
 }
 
-.secondary-btn {
-    border: 2px solid #696969;
+.secondary-btn,
+.ghost-btn:hover {
+    box-shadow: inset 0 0 0 2px #696969;
+}
+
+.secondary-btn:hover {
+    background-color: #696969;
+    color: #fafafa;
 }
 
 .close-nav-btn {
     align-self: flex-end;
+}
+
+.open-nav-btn:hover,
+.close-nav-btn:hover {
+    transform: scale(1.3)
 }
 
 /* =========================
@@ -154,6 +167,11 @@ button {
 /* =========================
         HOMEPAGE STYLES
    =========================  */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
 
 .home-content {
     text-align: center;
