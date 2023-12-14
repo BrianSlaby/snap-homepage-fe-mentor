@@ -48,11 +48,11 @@ React.useEffect(() => {
       
       
       <header className={`page-header ${desktopLayoutClassName}`}>
-        <img src="./public/images/logo.svg" className="logo"/>
+        <img src="/images/logo.svg" className="logo"/>
 
         {windowWidth < layoutSwitchWidth ?
         <Button classProp="open-nav-btn" clickProp={toggleNav}>
-          <img src="./public/icons/icon-menu.svg"/>
+          <img src="/icons/icon-menu.svg"/>
         </Button> :
         <>
           <Nav />
@@ -76,16 +76,16 @@ React.useEffect(() => {
           <Button classProp={`primary-btn ${desktopLayoutClassName}`}>Learn more</Button>
           <Banner classProp={`client-logos-banner ${desktopLayoutClassName}`}>
             <img 
-              src="./public/images/client-databiz.svg"
+              src="/images/client-databiz.svg"
               className="client-logo" />
             <img 
-              src="./public/images/client-audiophile.svg"
+              src="/images/client-audiophile.svg"
               className="client-logo" />
             <img 
-              src="./public/images/client-meet.svg"
+              src="/images/client-meet.svg"
               className="client-logo" />
             <img 
-              src="./public/images/client-maker.svg"
+              src="/images/client-maker.svg"
               className="client-logo" />
           </Banner>
         </section>

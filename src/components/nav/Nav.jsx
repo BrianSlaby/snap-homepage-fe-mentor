@@ -29,7 +29,7 @@ export default function Nav({ toggleNav }) {
             
             {windowWidth < layoutSwitchWidth && 
             <Button classProp="close-nav-btn" clickProp={toggleNav}>
-                <img src="./public/icons/icon-close-menu.svg"/>
+                <img src="/icons/icon-close-menu.svg"/>
             </Button>}
 
             <ul 
@@ -41,16 +41,16 @@ export default function Nav({ toggleNav }) {
                 {featuresOpen && 
                 <Dropdown>
                     <NavItem> 
-                        <img src="./public/icons/icon-todo.svg"/> Todo List
+                        <img src="/icons/icon-todo.svg"/> Todo List
                     </NavItem>
                     <NavItem> 
-                        <img src="./public/icons/icon-calendar.svg"/> Calendar
+                        <img src="/icons/icon-calendar.svg"/> Calendar
                     </NavItem>
                     <NavItem> 
-                        <img src="./public/icons/icon-reminders.svg"/> Reminders
+                        <img src="/icons/icon-reminders.svg"/> Reminders
                     </NavItem>
                     <NavItem> 
-                        <img src="./public/icons/icon-planning.svg"/> Planning
+                        <img src="/icons/icon-planning.svg"/> Planning
                     </NavItem>
                 </Dropdown>}
                 </NavItem>
