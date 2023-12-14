@@ -182,7 +182,8 @@ button {
     align-self: flex-start;
 }
 
-.primary-btn:hover {
+.primary-btn:hover,
+.primary-btn:focus {
     background-color: #fafafa;
     color: #141414;
     box-shadow: inset 0 0 0 2px #141414;
@@ -194,11 +195,13 @@ button {
 }
 
 .secondary-btn,
-.ghost-btn:hover {
+.ghost-btn:hover,
+.ghost-btn:focus {
     box-shadow: inset 0 0 0 2px #696969;
 }
 
-.secondary-btn:hover {
+.secondary-btn:hover,
+.secondary-btn:focus {
     background-color: #696969;
     color: #fafafa;
 }
@@ -208,7 +211,9 @@ button {
 }
 
 .open-nav-btn:hover,
-.close-nav-btn:hover {
+.open-nav-btn:focus,
+.close-nav-btn:hover,
+.close-nav-btn:focus {
     transform: scale(1.2)
 }
 
