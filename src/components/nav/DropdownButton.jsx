@@ -6,7 +6,9 @@ export default function DropdownButton({ open, toggle }) {
 
     return(
         <button onClick={toggle}>
-            <img src={`../../public/icons/${icon}`}/>
+            <img 
+                src={`../../public/icons/${icon}`}
+                className={`dropdown-btn`}/>
         </button>
     )
 }

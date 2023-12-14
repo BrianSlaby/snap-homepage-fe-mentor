@@ -107,6 +107,14 @@ body {
     flex-direction: column;
 }
 
+.li-gap-adjust {
+    padding-right: 1.5em;
+}
+
+.nav-links-primary li {
+    position: relative;
+}
+
 .nav-links-primary.desktop-layout {
     flex-direction: row;
     flex-grow: 3;
@@ -118,6 +126,30 @@ body {
 .main-nav a {
     text-decoration: none;
     color: #696969;
+}
+
+.main-nav a:visited {
+    color: #551A8B;
+}
+
+.main-nav a:active {
+    color: #EE0000;
+}
+
+.dropdown-btn {
+    position: relative;
+}
+
+.nav-links-secondary.desktop-layout {
+    position: absolute;
+    z-index: 2;
+    right: 15px;
+    width: 8.75em;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #FFF;
+    font-size: 0.9375rem;
+    box-shadow: 0 0 10px #ebebeb;
 }
 
 /* =========================
@@ -177,7 +209,7 @@ button {
 
 .open-nav-btn:hover,
 .close-nav-btn:hover {
-    transform: scale(1.3)
+    transform: scale(1.2)
 }
 
 /* =========================

@@ -21,15 +21,7 @@ export default function Nav({ toggleNav }) {
 
     function toggleCompanyOpen() {
         setCompanyOpen(prevState => !prevState)
-    }
-
-        // think about secondary nav dropdowns
-            // keep as is in mobile
-            // they're essentially modals in desktop
-            // the NavItem is the parent, relative positioning?
-            // parent position relative, dropdowns position absolute
-
-    
+    }    
 
     return(
         <nav 
@@ -61,7 +53,6 @@ export default function Nav({ toggleNav }) {
                         <img src="./public/icons/icon-planning.svg"/> Planning
                     </NavItem>
                 </Dropdown>}
-                
                 </NavItem>
                 <NavItem>Company
                 <DropdownButton 
@@ -74,7 +65,7 @@ export default function Nav({ toggleNav }) {
                     <NavItem><a href="#">Blog</a></NavItem>
                 </Dropdown>}
                 </NavItem>
-                <NavItem><a href="#">Careers</a></NavItem>
+                <NavItem classProp="li-gap-adjust"><a href="#">Careers</a></NavItem>
                 <NavItem><a href="#">About</a></NavItem>
             </ul>
             
