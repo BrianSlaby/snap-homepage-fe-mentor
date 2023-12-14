@@ -3,13 +3,17 @@ import Button from "../Button"
 import Dropdown from "./Dropdown"
 import NavItem from "./NavItem"
 import DropdownButton from "./DropdownButton"
+import AuthButtons from "../AuthButtons"
 import { WindowSizeContext } from "../../App"
 
 export default function Nav({ toggleNav }) {
     const [featuresOpen, setFeaturesOpen] = React.useState(false)
     const [companyOpen, setCompanyOpen] = React.useState(false)
 
-    const { windowWidth, layoutSwitchWidth } = React.useContext(WindowSizeContext)
+    const { 
+        windowWidth, 
+        layoutSwitchWidth,
+        desktopLayoutClassName } = React.useContext(WindowSizeContext)
 
     function toggleFeaturesOpen() {
         setFeaturesOpen(prevState => !prevState)
@@ -19,19 +23,17 @@ export default function Nav({ toggleNav }) {
         setCompanyOpen(prevState => !prevState)
     }
 
-    // NOTE: get rid of the inline styling.
-        // conditionally add mobile and desktop classes and style in CSS file
         // think about secondary nav dropdowns
             // keep as is in mobile
             // they're essentially modals in desktop
             // the NavItem is the parent, relative positioning?
+            // parent position relative, dropdowns position absolute
 
-    const flexDirection = windowWidth < layoutSwitchWidth ? "column" : "row"
+    
 
     return(
         <nav 
-        className={`main-nav`}
-        style={{flexDirection: flexDirection}}>
+        className={`main-nav ${desktopLayoutClassName}`}>
             
             {windowWidth < layoutSwitchWidth && 
             <Button classProp="close-nav-btn" clickProp={toggleNav}>
@@ -39,14 +41,8 @@ export default function Nav({ toggleNav }) {
             </Button>}
 
             <ul 
-            className="nav-links nav-links-primary"
-            style={{ 
-                display: "flex", 
-                flexDirection: flexDirection,
-                gap: "1em",
-                alignItems: "flex-start",
-                justifyContent: "center" }}>
-                <NavItem>Features 
+            className={`nav-links nav-links-primary ${desktopLayoutClassName}`}>
+                <NavItem>Features
                 <DropdownButton 
                     open={featuresOpen} 
                     toggle={toggleFeaturesOpen}/>
@@ -67,7 +63,7 @@ export default function Nav({ toggleNav }) {
                 </Dropdown>}
                 
                 </NavItem>
-                <NavItem>Company 
+                <NavItem>Company
                 <DropdownButton 
                     open={companyOpen}
                     toggle={toggleCompanyOpen}/>
@@ -82,8 +78,7 @@ export default function Nav({ toggleNav }) {
                 <NavItem><a href="#">About</a></NavItem>
             </ul>
             
-            <Button classProp="ghost-btn">Login</Button>
-            <Button classProp="secondary-btn">Register</Button>
+            {windowWidth < layoutSwitchWidth && <AuthButtons />}
         </nav>
     )
 }

@@ -15,14 +15,40 @@ body {
     background-color: #fafafa;
 }
 
-header {
+/* =========================
+        HEADER STYLES 
+   =========================  */
+
+.page-header {
     padding: 2em;
     display: flex;
     justify-content: space-between;
 }
 
-h1 {
-    font-size: 2.25rem;
+.page-header.desktop-layout {
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.page-header .logo {
+    object-fit: contain;
+}
+
+.auth-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.auth-buttons-container button {
+    min-width: 130px;
+}
+
+.auth-buttons-container.desktop-layout {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
 /* =========================
@@ -63,6 +89,10 @@ h1 {
     gap: 1em;
 }
 
+.main-nav.desktop-layout {
+    flex-direction: row;
+}
+
 .nav-links {
     list-style-type: none;
 }
@@ -73,6 +103,16 @@ h1 {
 
 .nav-links-primary {
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links-primary.desktop-layout {
+    flex-direction: row;
+    flex-grow: 3;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main-nav a {
@@ -103,6 +143,11 @@ button {
     background-color: #141414;
     color: #fafafa;
     font-weight: 700;
+    align-self: center;
+}
+
+.primary-btn.desktop-layout {
+    align-self: flex-start;
 }
 
 .primary-btn:hover {
@@ -149,6 +194,10 @@ button {
     margin-top: 3em;
 }
 
+.client-logos-banner.desktop-layout {
+    margin-top: 6em;
+}
+
 .client-logo {
     max-width: 20%;
     aspect-ratio: auto;
@@ -168,12 +217,36 @@ button {
         HOMEPAGE STYLES
    =========================  */
 
-main {
+.main-home {
     display: flex;
     flex-direction: column;
 }
 
+.main-home.desktop-layout {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.hero-img-container.desktop-layout {
+    order: 2;
+}
+
+.hero-img {
+    object-fit: contain;
+}
+
+.home-content-header {
+    font-size: 2.25rem;
+}
+
+.home-content-header.desktop-layout {
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
 .home-content {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 1em;
 }
@@ -181,6 +254,14 @@ main {
 .home-content p {
     color: #696969;
     margin-bottom: 2em;
+}
+
+.home-content.desktop-layout {
+    text-align: left;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 5%;
+    max-width: 600px;
 }
 
 /* =========================
