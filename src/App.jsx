@@ -14,8 +14,8 @@ const overlayVisibility = navVisible ? "overlay-active" : ""
 const layoutSwitchWidth = 1000
 const desktopLayoutClassName = windowWidth < layoutSwitchWidth ? "" : "desktop-layout"
 const heroImgSrc = windowWidth < layoutSwitchWidth ? 
-"./public/images/image-hero-mobile.png" : 
-"./public/images/image-hero-desktop.png"
+"/images/image-hero-mobile.png" : 
+"/images/image-hero-desktop.png"
 
 function toggleNav() {
   setNavVisible(prevState => !prevState)
